@@ -95,19 +95,39 @@ public class basic {
         return size;
     }
 
+    public void reverseIterate(){
+        if(head == null || head.next == null)return;
+
+
+        Node prevNode = head;
+        Node currentNode = head.next;
+        while(currentNode != null){
+            Node nextNode = currentNode.next;
+            currentNode.next = prevNode;
+
+//            update
+            prevNode = currentNode;
+            currentNode = nextNode;
+        }
+        head.next = null;
+        head = prevNode;
+    }
+
     public static void main(String[] args) {
        basic list = new basic();
-       list.addFirst("a");
-       list.addFirst("is");
-       list.printList();
-       list.addLast("list");
-       list.printList();
-       list.addFirst("this");
-       list.printList();
-       list.deleteFirst();
-       list.printList();
-       list.deleteLast();
-       list.printList();
-        System.out.println(list.getSize());
+//       list.addFirst("a");
+//       list.addFirst("is");
+//       list.printList();
+//       list.addLast("list");
+//       list.printList();
+//       list.addFirst("this");
+//       list.printList();
+//       list.deleteFirst();
+//       list.printList();
+//       list.deleteLast();
+//       list.printList();
+//        System.out.println(list.getSize());
+
+
     }
 }
