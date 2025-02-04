@@ -1,6 +1,7 @@
-import java.util.*;
-public class practice {
-    public static void main(String[] args) {
-    }
+package String;
 
+public class Pallindrome {
+    public static void main(String[] args) {
+        
+    }
 }

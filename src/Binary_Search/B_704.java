@@ -10,7 +10,7 @@ public class B_704 {
     }
     public static int binarySearch(int nums[],int target,int start , int end){
 
-        while(start<= end){
+        if(start<= end){
             int mid = start + (end-start)/2;
             if(nums[mid] == target)return mid;
             else if(nums[mid] > target )return binarySearch(nums,target,start,mid-1);
